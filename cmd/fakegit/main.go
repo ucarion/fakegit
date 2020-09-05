@@ -9,6 +9,7 @@ import (
 func main() {
 	cli.Run(
 		context.Background(),
+		root,
 		status,
 		remote,
 		remoteAdd,
