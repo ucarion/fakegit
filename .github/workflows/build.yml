@@ -8,3 +8,34 @@ jobs:
           go-version: ^1.15
       - uses: actions/checkout@v2
       - run: make all
+      - uses: actions/upload-artifact@v2
+        with:
+          name: make-all
+          path: build
+  # release:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   if: contains(github.ref, 'refs/tags/v')
+  #   steps:
+  #     - uses: actions/download-artifact@v2
+  #       with:
+  #         name: make-all
+  #         path: build
+  #     - id: create_release
+  #       uses: actions/create-release@v1
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       with:
+  #         tag_name: ${{ github.ref }}
+  #         release_name: ${{ github.ref }}
+  #         draft: false
+  #         prerelease: false
+  #     - run: zip -r pkg/fakegit_darwin_amd64.zip fakegit_darwin
+  #     - uses: actions/upload-release-asset@v1
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       with:
+  #         upload_url: ${{ steps.create_release.outputs.upload_url }}
+  #         asset_path: ./fakegit_darwin.zip
+  #         asset_name: my-artifact.zip
+  #         asset_content_type: application/zip
