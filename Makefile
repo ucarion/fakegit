@@ -16,7 +16,7 @@ build/%.1: fakegit_man
 	:
 
 .PHONY: fakegit_man
-fakegit_man:
+fakegit_man: ./build/fakegit
 	UCARION_CLI_GENERATE_MAN="build" ./build/fakegit
 
 build/%.html: build/%.1
