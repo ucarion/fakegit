@@ -17,7 +17,7 @@ fakegit: cmd/fakegit/*.go
 %.html: %.1
 	mandoc -Thtml $< > $@
 
-LDFLAGS = "-X main.version=$(shell git describe)"
+LDFLAGS = "-X main.version=$(shell git describe --tags)"
 
 fakegit_darwin:
 	GOOS=darwin GOARCH=amd64 go build -o fakegit_darwin -ldflags $(LDFLAGS) ./cmd/fakegit/...
