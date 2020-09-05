@@ -11,7 +11,7 @@ all: $(COMMANDS) $(COMMANDS:.1=.html)
 
 LDFLAGS = "-X main.version=$(shell git describe --tags)"
 build/fakegit: cmd/fakegit/*.go
-	go build -o ./build/fakegit -ldflags $(LDFLAGS) ./cmd/fakegit/...
+	GOOS=$(GOOS) GOARCH=$(GOARCH) go build -o ./build/fakegit -ldflags $(LDFLAGS) ./cmd/fakegit/...
 
 build/%.1: fakegit_man
 	:
