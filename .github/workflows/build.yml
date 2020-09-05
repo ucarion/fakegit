@@ -42,8 +42,8 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: make-all
+          path: make-all
       - run: mkdir build
-      - run: ls -al
       - run: cp make-all/*.1 build
       - run: cp make-all/*.html build
       - run: GOOS=darwin GOARCH=amd64 make all
