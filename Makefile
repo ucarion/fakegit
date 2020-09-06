@@ -7,7 +7,7 @@ COMMANDS += build/fakegit-remote-set-url.1
 COMMANDS += build/fakegit-status.1
 
 .PHONY: all
-all: $(COMMANDS) $(COMMANDS:.1=.html)
+all: build/fakegit $(COMMANDS) $(COMMANDS:.1=.html)
 
 LDFLAGS = "-X main.version=$(shell git describe --tags)"
 build/fakegit: cmd/fakegit/*.go

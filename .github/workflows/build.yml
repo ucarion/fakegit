@@ -45,8 +45,7 @@ jobs:
           path: make-all
       - run: mkdir build
       - run: cp make-all/*.1 build
-      - run: cp make-all/*.html build
-      - run: GOOS=darwin GOARCH=amd64 make all
+      - run: GOOS=darwin GOARCH=amd64 make build/fakegit
       - run: zip -r build darwin.zip
       - uses: actions/upload-release-asset@v1
         env:
