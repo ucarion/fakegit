@@ -46,7 +46,7 @@ jobs:
       - run: mkdir build
       - run: cp make-all/*.1 build
       - run: GOOS=darwin GOARCH=amd64 make build/fakegit
-      - run: zip --no-dir-entries build.zip build/*
+      - run: zip --junk-paths build.zip build/*
       - uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
