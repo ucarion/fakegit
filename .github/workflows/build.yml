@@ -46,12 +46,12 @@ jobs:
       - run: mkdir build
       - run: cp make-all/*.1 build
       - run: GOOS=darwin GOARCH=amd64 make build/fakegit
-      - run: zip -r darwin_amd64.zip build
+      - run: zip -r build.zip build/*
       - uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create_release.outputs.upload_url }}
-          asset_path: ./darwin_amd64.zip
-          asset_name: darwin_amd64.zip
+          asset_path: ./build.zip
+          asset_name: fakegit_darwin_amd64.zip
           asset_content_type: application/zip
