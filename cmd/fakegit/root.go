@@ -46,11 +46,26 @@ Prints the Git suite version that the git program came from.
 `)
 }
 
-func (_ rootArgs) ExtendedUsage_Pager() string {
+func (_ rootArgs) ExtendedUsage_Paginate() string {
 	return strings.TrimSpace(`
 Pipe all output into less (or if set, $PAGER) if standard output is a terminal.
 This overrides the pager.<cmd> configuration options (see the "Configuration
 Mechanism" section below).
+`)
+}
+
+func (_ rootArgs) ExtendedUsage_Bare() string {
+	return strings.TrimSpace(`
+Treat the repository as a bare repository. If GIT_DIR environment is not set, it
+is set to the current working directory.
+`)
+}
+
+func (_ rootArgs) ExtendedUsage_GitDir() string {
+	return strings.TrimSpace(`
+Set the path to the repository. This can also be controlled by setting the
+GIT_DIR environment variable. It can be an absolute path or relative path to
+current working directory.
 `)
 }
 
