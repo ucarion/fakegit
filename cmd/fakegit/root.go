@@ -8,6 +8,8 @@ import (
 	"strings"
 )
 
+// version is the string we output if the user passes --version. Its value is
+// injected via ldflags from the Makefile.
 var version string
 
 type rootArgs struct {
