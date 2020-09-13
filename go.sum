@@ -8,6 +8,8 @@ github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+
 github.com/stretchr/testify v1.6.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/ucarion/cli v0.0.0-20200904172932-1387774e87e5 h1:vUWh3KJKBgm5E1eY6T+AXpF3GhHTo8bhIq4Dj2eS52s=
 github.com/ucarion/cli v0.0.0-20200904172932-1387774e87e5/go.mod h1:DQYCHz8UFwRVQL1AabaZ4kCB+EiTViYRJ5jLXQXhuCs=
+github.com/ucarion/cli v0.1.0 h1:9clS2unqzIMeMGRjS5iDf8wNlkpEk6J4QDPLUkoKesw=
+github.com/ucarion/cli v0.1.0/go.mod h1:DQYCHz8UFwRVQL1AabaZ4kCB+EiTViYRJ5jLXQXhuCs=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=
