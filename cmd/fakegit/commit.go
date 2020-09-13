@@ -44,7 +44,7 @@ type commitArgs struct {
 	Status            bool     `cli:"--status" usage:"include output of git-status(1) in message editor"`
 	NoStatus          bool     `cli:"--no-status" usage:"disable --status"`
 	GPGSign           *string  `cli:"-S,--gpg-sign" value:"keyid" usage:"GPG-sign commits"`
-	Files             []string `cli:"...file"`
+	Files             []string `cli:"file..."`
 }
 
 func (_ commitArgs) Description() string {

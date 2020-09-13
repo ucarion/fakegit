@@ -101,7 +101,7 @@ type remoteSetURLArgs struct {
 	Delete     bool       `cli:"--delete" usage:"all URLs matching regex <url> are deleted for remote <name>"`
 	Name       string     `cli:"name"`
 	NewURL     string     `cli:"newurl"`
-	OldURL     []string   `cli:"...oldurl"`
+	OldURL     []string   `cli:"oldurl..."`
 }
 
 func (_ remoteSetURLArgs) Description() string {

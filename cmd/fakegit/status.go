@@ -11,7 +11,7 @@ type statusArgs struct {
 	RootArgs  rootArgs `cli:"status,subcmd"`
 	Verbose   bool     `cli:"-v,--verbose" usage:"be verbose"`
 	Short     bool     `cli:"-s,--short" usage:"show status concisely"`
-	Pathspecs []string `cli:"...pathspec"`
+	Pathspecs []string `cli:"pathspec..."`
 }
 
 func (_ statusArgs) Description() string {
